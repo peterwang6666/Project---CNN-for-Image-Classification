@@ -1,0 +1,154 @@
+---
+
+Project - CNN for Image Classification
+Introduction
+Image classification is one of the most prominent applications of deep learning in computer vision. In this project, I built a Convolutional Neural Network (CNN) to classify images of cats and dogs using TensorFlow with Keras. This post outlines the purpose, dataset, model architecture, results, and conclusions of the project.
+Purpose of the Project
+The objective of this project is to:
+Train a machine learning model to classify cats and dogs from images.
+Apply deep learning concepts such as convolution, pooling, and dense layers.
+Evaluate the model's performance and test its prediction on unseen images.
+
+The project is ideal for beginners looking to understand how to use CNNs for binary image classification tasks.
+
+Here's a structured draft for your Medium post based on the project details:
+
+---
+
+Cat vs Dog Classification: Building a CNN with TensorFlow/Keras
+
+Introduction
+
+Image classification is one of the most prominent applications of deep learning in computer vision. In this project, I built a Convolutional Neural Network (CNN) to classify images of cats and dogs using TensorFlow with Keras. This post outlines the purpose, dataset, model architecture, results, and conclusions of the project.
+
+---
+
+Purpose of the Project
+
+The objective of this project is to:
+Train a machine learning model to classify cats and dogs from images.
+Apply deep learning concepts such as convolution, pooling, and dense layers.
+Evaluate the model's performance and test its prediction on unseen images.
+
+The project is ideal for beginners looking to understand how to use CNNs for binary image classification tasks.
+
+---
+
+Dataset
+
+The dataset consists of two main parts:
+Training Set: 4000 images of cats and 4000 images of dogs.
+Test Set: 1000 images of cats and 1000 images of dogs.
+
+Dataset Structure
+
+The dataset is organized as follows:
+dataset/
+│
+├── training_set/
+│ ├── cats/
+│ ├── dogs/
+│
+├── test_set/
+│ ├── cats/
+│ ├── dogs/
+Machine Learning Model
+I implemented a Convolutional Neural Network (CNN) with the following structure:
+Convolutional Layers:
+MaxPooling Layers:
+Fully Connected Layers:
+
+Here's a structured draft for your Medium post based on the project details:
+
+---
+
+Cat vs Dog Classification: Building a CNN with TensorFlow/Keras
+
+Introduction
+
+Image classification is one of the most prominent applications of deep learning in computer vision. In this project, I built a Convolutional Neural Network (CNN) to classify images of cats and dogs using TensorFlow with Keras. This post outlines the purpose, dataset, model architecture, results, and conclusions of the project.
+
+---
+
+Purpose of the Project
+
+The objective of this project is to:
+Train a machine learning model to classify cats and dogs from images.
+Apply deep learning concepts such as convolution, pooling, and dense layers.
+Evaluate the model's performance and test its prediction on unseen images.
+
+The project is ideal for beginners looking to understand how to use CNNs for binary image classification tasks.
+
+---
+
+Dataset
+
+The dataset consists of two main parts:
+Training Set: 4000 images of cats and 4000 images of dogs.
+Test Set: 1000 images of cats and 1000 images of dogs.
+
+Dataset Structure
+
+The dataset is organized as follows:
+复制代码
+
+dataset/
+│
+├── training_set/
+│   ├── cats/
+│   ├── dogs/
+│
+├── test_set/
+│   ├── cats/
+│   ├── dogs/
+
+For predictions, a single_prediction folder contains new images that the model classifies after training.
+
+---
+
+Machine Learning Model
+
+I implemented a Convolutional Neural Network (CNN) with the following structure:
+Convolutional Layers:
+
+Extract spatial features using filters (3x3 kernel size).
+Use ReLU activation to introduce non-linearity.
+
+MaxPooling Layers:
+
+Reduce spatial dimensions while retaining important features.
+
+Fully Connected Layers:
+
+Dense layer with 128 neurons.
+Dropout Layer: Helps prevent overfitting.
+Final sigmoid activation for binary classification.
+
+Model Summary
+
+Here's the model architecture:
+LayerOutput ShapeParametersConv2D (32 filters, 3x3)(64, 64, 32)896MaxPooling2D(32, 32, 32)0Conv2D (64 filters, 3x3)(30, 30, 64)18,496MaxPooling2D(15, 15, 64)0Flatten14,4000Dense (128 neurons)1281,843,328Dropout - Dense (1 neuron)1129
+Optimizer: Adam | Loss Function: Binary Crossentropy | Metrics: Accuracy
+
+---
+
+Results
+
+I trained the model for 25 epochs using the training set and validated it on the test set. After training:
+Accuracy: The model achieved significant accuracy for classifying unseen cat and dog images.
+Loss: The training and validation loss steadily decreased.
+
+Testing Predictions
+Here's a snapshot of predictions for images in the single_prediction folder:
+Image1.jpg → Dog
+Image2.jpg → Cat
+
+Conclusion
+This project successfully demonstrates the power of Convolutional Neural Networks in solving image classification problems. The key takeaways include:
+Preprocessing images using ImageDataGenerator is essential for feeding data into CNNs.
+Using dropout layers helps in reducing overfitting.
+A relatively simple CNN architecture can achieve impressive results for binary classification tasks.
+
+For anyone exploring deep learning or starting with image classification, this project serves as a foundational example of building and training a CNN using TensorFlow/Keras.
+
+---
