@@ -77,4 +77,6 @@ Project - CNN for Image Classification/
 ├── cat_dog_classifier.h5
 ├── README.md
 
+Link to dataset file: https://drive.google.com/file/d/1YUvSL7px1UTm2Rx6EGCN2bj22fobCdVT/view?usp=drive_link
+Since I am currently in China so I cannot post anything to medium.com. Since that website reqiure a foreign phone number to authenticate account. I will copy the post from medium.com and leave it in github link.
 
